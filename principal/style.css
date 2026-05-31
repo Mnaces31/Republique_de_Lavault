@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-default);
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Segoe UI Emoji';
+    src: url(../assets/font/segoe-ui-emoji_0.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+:root{
+    --font-default: 'Segoe UI Emoji';
+
+    --ColorMain: #0A3D62;
+    --ColorSecundary: #F39C12;
+    --ColorBackground: #F9FAFB;
+    --ColorText: #FFFFFF;
+    --ColorText2: #BEDBFF;
+}
+
+/*---------------------------------------------------------------------------*/
+
+header{
+    background: var(--ColorMain);
+    color: var(--ColorText);
+}
+
+.nav-container{
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.nav-img{
+    padding: 5px;
+    background-color: var(--ColorSecundary);
+    border-radius: 5px;
+}
+
+.nav-text h1{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px; /* 125% */
+}
+
+.nav-text p{
+    color: var(--ColorText2);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px; /* 150% */
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--ColorText);
+}
+
+.nav-listmain{
+    width: 100%;
+    margin: auto;
+}
+
+.nav-items{
+    line-height: 50px;
+    float: left;
+    padding: 0 25px;
+    display: block;
+}
+
+ul li ul li{
+    background-color: var(--ColorMain);
+} /*.submenu*/
+
+.submenu{
+    display: none;
+}
+
+ul li:hover .submenu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+ul li:hover .submenu {
+    display: flex;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInDown 0.3s forwards;
+    z-index: 20;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul li ul li a{
+    display: block;
+    padding: 0px 20px;
+    transition: all .3s ease-out;
+}
+
