@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/img/flor-de-lis-og.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/noto_fleur-de-lis.ico" type="image/x-icon">
     <title>Republique de Lavault</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,49 +12,67 @@
         <div class="nav-container">
             <div class="nav-title">
                 <div class="nav-img">
-                    <img src="../assets/img/f.png" alt="Home">
+                    <img src="../assets/icons/noto_fleur-de-lis.svg" alt="Home">
                 </div>
                 <div class="nav-text">
                     <h1>Republique de Lavault</h1>
                     <p>Gouvernement officiel</p>
                 </div>
             </div>
-            <nav>
-                <ul class="nav-listmain">
-                    <li class="nav-items"><a href="">L'actualités</a></li>
-                    <li class="nav-items"><a href="">Immigration</a></li>
-                    <li class="nav-items"><a href="">Prestations de service</a></li>
-                    <li class="nav-items">
-                        <a href="">Provinces</a>
-                        <ul class="submenu">
-                            <li class="nav-items"><a href="">Amons</a></li>
-                            <li class="nav-items"><a href="">Gremont</a></li>
-                            <li class="nav-items"><a href="">Licques</a></li>
-                            <li class="nav-items"><a href="">Mauvais</a></li>
-                            <li class="nav-items"><a href="">Nubecourt</a></li>
-                            <li class="nav-items"><a href="">Ressiê</a></li>
-                            <li class="nav-items"><a href="">Pretagne</a></li>
-                        </ul>
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="item"><a href="#">L'actualités</a></li>
+                    <li class="item"><a href="#">Immigration</a></li>
+                    <li class="item"><a href="#">Prestations</a></li>
+
+                    <li class="item dropdown">
+                    <a href="#">Provinces</a>
+
+                    <ul class="submenu">
+                        <li><a href="#">Amons</a></li>
+                        <li><a href="#">Gremont</a></li>
+                        <li><a href="#">Licques</a></li>
+                        <li><a href="#">Mauvais</a></li>
+                        <li><a href="#">Nubecourt</a></li>
+                    </ul>
                     </li>
                 </ul>
             </nav>
-            <div class="nav-recherches">
+            <div class="nav-search">
                 <form action="/search" method="get">
-                    <img src="" alt="">
-                    <input type="search" name="q" id="search" placeholder="Recherches">
+                    <img src="../assets/icons/Magnifying-Glass.svg" alt="Recherches">
+                    <input 
+                    type="search" 
+                    name="q" 
+                    id="search" 
+                    placeholder="Recherches">
                 </form>
             </div>
         </div>
     </header>
-    <!--
-    <section class="image">
-        <img src="../assets/img/cidade.jpg" alt="">
-        <div class="section-text">
-            <h1>Bienvenue en Republique de Lavault</h1>
-            <h2>Ensemble, construisons l'avenir de notre nation</h2>
-            <a href="" class="section-button">Découvrir nos services</a>
+    
+    <section class="hero">
+    <img src="../assets/img/cidade.jpg" alt="Vista da República de Lavault">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>
+            Bienvenue en République de Lavault
+        </h1>
+
+        <p>
+            Ensemble, construisons l'avenir de notre nation à travers
+            l'innovation, la transparence et le développement durable.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#" class="btn-primary">
+                Découvrir nos services
+            </a>
         </div>
-    </section>
-    -->
+    </div>
+</section>
+    
 </body>
 </html>

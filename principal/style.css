@@ -25,16 +25,17 @@
 /*---------------------------------------------------------------------------*/
 
 header{
+    position: relative;
     background: var(--ColorMain);
     color: var(--ColorText);
 }
 
 .nav-container{
     width: 100%;
-    padding: 20px 40px;
+    padding: 8px 24px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .nav-title{
@@ -45,7 +46,7 @@ header{
 
 .nav-img{
     padding: 5px;
-    background-color: var(--ColorSecundary);
+    background-color: rgba(243, 156, 18, 0.75);
     border-radius: 5px;
 }
 
@@ -62,60 +63,202 @@ header{
     line-height: 15px; /* 150% */
 }
 
-nav ul{
+/*=======MENU NAV========*/
+nav{
+    padding: 16px 40px;
+}
+
+.menu{
+    display: flex;
+    gap: 32px;
     list-style: none;
+    align-items: center;
 }
 
-nav a{
-    text-decoration: none;
+.item{
+    position: relative;
+}
+
+.item a{
     color: var(--ColorText);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 8px;
+    display: inline-block;
 }
 
-.nav-listmain{
-    width: 100%;
-    margin: auto;
-}
-
-.nav-items{
-    line-height: 50px;
-    float: left;
-    padding: 0 25px;
-    display: block;
-}
-
-ul li ul li{
-    background-color: var(--ColorMain);
-} /*.submenu*/
+/*====== Drop Down ========*/
 
 .submenu{
-    display: none;
-}
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
 
-ul li:hover .submenu{
+    min-width: 180px;
+    background: var(--ColorMain);
+    border-radius: 8px;
+    padding: 8px 0;
+
     display: flex;
     flex-direction: column;
-    position: absolute;
-}
+    list-style: none;
 
-ul li:hover .submenu {
-    display: flex;
-    position: absolute;
     opacity: 0;
-    transform: translateY(-10px);
-    animation: fadeInDown 0.3s forwards;
-    z-index: 20;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    pointer-events: none;
+
+    transition: 0.2s ease;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-@keyframes fadeInDown {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-ul li ul li a{
+.submenu li a{
+    padding: 10px 16px;
     display: block;
-    padding: 0px 20px;
+    color: var(--ColorText2);
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.submenu li a:hover{
+    background: rgba(10, 61, 98, 0.4);
+}
+
+/*Ativação*/
+
+.dropdown:hover .submenu,
+.dropdown:focus-within .submenu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/*-------Search-------*/
+
+.nav-search form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 320px;
+    padding: 12px 16px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+
+    background-color: rgba(255,255,255,0.08);
+
     transition: all .3s ease-out;
+}
+
+.nav-search form:hover{
+    background-color: rgba(255,255,255,0.12);
+}
+
+.nav-search form:focus-within{
+    border-color: var(--ColorSecundary);
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.2);
+}
+
+.nav-search input{
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: var(--ColorText);
+    font-size: 14px;
+}
+
+.nav-search input::placeholder{
+    color: var(--ColorText2);
+}
+
+/*-----Section Hero-----*/
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    min-height: 600px;
+    overflow: hidden;
+}
+
+.hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(10, 61, 98, 0.75),
+        rgba(10, 61, 98, 0.55)
+    );
+}
+
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: min(900px, 90%);
+    text-align: center;
+    color: var(--ColorBackground);
+    z-index: 2;
+}
+
+.hero-content h1{
+    margin-bottom: 20px;
+
+    color: var(--ColorText);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px; /* 100% */
+}
+
+.hero-content p{
+    max-width: 700px;
+    margin: 0 auto 35px;
+
+    color: rgba(255,255,255,.9);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px; /* 133.333% */
+}
+
+.hero-actions{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-primary{
+    text-decoration: none;
+
+    padding: 16px 28px;
+    border-radius: 10px;
+    background: var(--ColorSecundary);
+
+    color: var(--ColorText);
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.25);
 }
 
