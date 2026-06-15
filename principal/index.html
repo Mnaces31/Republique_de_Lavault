@@ -1,139 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/img/noto_fleur-de-lis.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../assets/img/noto_fleur-de-lis.ico"
+      type="image/x-icon"
+    />
     <title>Republique de Lavault</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/e87cc7d905.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/e87cc7d905.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header>
         <div class="nav-container">
-            <div class="nav-title">
-                <div class="nav-img">
-                    <img src="../assets/icons/noto_fleur-de-lis.svg" alt="Home">
-                </div>
-                <div class="nav-text">
-                    <h1>Republique de Lavault</h1>
-                    <p>Gouvernement officiel</p>
-                </div>
+        <div class="nav-title">
+            <div class="nav-img">
+            <img src="../assets/icons/noto_fleur-de-lis.svg" alt="Home" />
             </div>
-            <nav class="nav">
-                <ul class="menu">
-                    <li class="item"><a href="#">L'actualités</a></li>
-                    <li class="item"><a href="#">Immigration</a></li>
-                    <li class="item"><a href="#">Prestations</a></li>
-
-                    <li class="item dropdown">
-                    <a href="#">Provinces</a>
-
-                    <ul class="submenu">
-                        <li><a href="#">Amons</a></li>
-                        <li><a href="#">Gremont</a></li>
-                        <li><a href="#">Licques</a></li>
-                        <li><a href="#">Mauvais</a></li>
-                        <li><a href="#">Nubecourt</a></li>
-                    </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div class="nav-search">
-                <form action="/search" method="get">
-                    <img src="../assets/icons/Magnifying-Glass.svg" alt="Recherches">
-                    <input 
-                    type="search" 
-                    name="q" 
-                    id="search" 
-                    placeholder="Recherches">
-                </form>
+            <div class="nav-text">
+            <h1>Republique de Lavault</h1>
+            <p>Gouvernement officiel</p>
             </div>
         </div>
+        <nav class="nav">
+            <ul class="menu">
+            <li class="item"><a href="#">L'actualités</a></li>
+            <li class="item"><a href="#">Immigration</a></li>
+            <li class="item"><a href="#">Prestations</a></li>
+
+            <li class="item dropdown">
+                <a href="#">Provinces</a>
+
+                <ul class="submenu">
+                <li><a href="#">Amons</a></li>
+                <li><a href="#">Gremont</a></li>
+                <li><a href="#">Licques</a></li>
+                <li><a href="#">Mauvais</a></li>
+                <li><a href="#">Nubecourt</a></li>
+                </ul>
+            </li>
+            </ul>
+        </nav>
+        <div class="nav-search">
+            <form action="/search" method="get">
+            <img src="../assets/icons/Magnifying-Glass.svg" alt="Recherches" />
+            <input
+                type="search"
+                name="q"
+                id="search"
+                placeholder="Recherches"
+            />
+            </form>
+        </div>
+        </div>
     </header>
-    
+
     <section class="hero">
-        <img src="../assets/img/cidade.jpg" alt="Vista da República de Lavault">
+        <img src="../assets/img/cidade.jpg" alt="Vista da República de Lavault" />
 
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-            <h1>
-                Bienvenue en République de Lavault
-            </h1>
+        <h1>Bienvenue en République de Lavault</h1>
 
-            <p>
-                Ensemble, construisons l'avenir de notre nation à travers
-                l'innovation, la transparence et le développement durable.
-            </p>
+        <p>
+            Ensemble, construisons l'avenir de notre nation à travers
+            l'innovation, la transparence et le développement durable.
+        </p>
 
-            <div class="hero-actions">
-                <a href="#" class="btn-primary">
-                    Découvrir nos services
-                </a>
-            </div>
+        <div class="hero-actions">
+            <a href="#" class="btn-primary"> Découvrir nos services </a>
+        </div>
         </div>
     </section>
 
     <main>
         <section class="service">
-            <div class="service-title">
-                <h2>Trouvez les services dont vous avez besoin</h2>
-                <p>Accédez facilement aux services gouvernementaux en ligne</p>
+        <div class="service-title">
+            <h2>Trouvez les services dont vous avez besoin</h2>
+            <p>Accédez facilement aux services gouvernementaux en ligne</p>
+        </div>
+
+        <div class="service-grid">
+            <a href="" class="card">
+            <i class="fa-solid fa-building-columns fa-2x"></i>
+            <p>Services en ligne</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-hospital fa-2x"></i>
+            <p>Santé et bien-être</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-graduation-cap fa-2x"></i>
+            <p>Éducation et formation</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-briefcase fa-2x"></i>
+            <p>Emploi et économie</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-bus fa-2x"></i>
+            <p>Transport et mobilité</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-tree fa-2x"></i>
+            <p>Environnement</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-scale-balanced fa-2x"></i>
+            <p>Justice et sécurité</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-city fa-2x"></i>
+            <p>Logement et urbanisme</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-masks-theater fa-2x"></i>
+            <p>Culture et patrimoine</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-utensils fa-2x"></i>
+            <p>Agriculture et alimentation</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-coins fa-2x"></i>
+            <p>Fiscalité et finances</p>
+            </a>
+            <a href="" class="card">
+            <i class="fa-solid fa-earth-europe fa-2x"></i>
+            <p>Immigration</p>
+            </a>
+        </div>
+        </section>
+
+        <section class="priority">
+            <div class="priority-title">
+                <h2>Nos initiatives prioritaires</h2>
+                <a href="">
+                    Voir toutes les initiatives
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
             </div>
 
-            <div class="service-grid">
-                <a href="" class="card">
-                    <i class="fa-solid fa-building-columns fa-2x"></i>
-                    <p>Services en ligne</p>
+            <div class="priority-container">
+                <div class="priority-card">
+                    <div class="priority-image">
+                        <img src="../assets/img/train-mauveis.webp" alt="Nouvelles">
+                    </div>
+                    <div class="priority-card-body">
+                        <h3>Construction de la gare centrale de Sézanne e connexion grande vitesse</h3>
+                        <p>Modernisation majeure des infrastructures de transport pour dynamiser le centre-ville.</p>
+                        <a href="">
+                            En savoir plus
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="priority-card">
+                    <div class="priority-image">
+                        <img src="../assets/img/bond.webp" alt="Nouvelles">
+                    </div>
+                    <div class="priority-card-body">
+                        <h3>Piétonnisation et éco-mobilité au cœur de Lavault</h3>
+                        <p>Transformation majeure du centre-ville avec la création de grandes zones piétonnes, de vélos intégrés et d'un nouveau réseau électrique (tramways) modernes.</p>
+                        <a href="">
+                            En savoir plus
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="priority-card">
+                    <div class="priority-image">
+                        <img src="../assets/img/interior.webp" alt="Nouvelles">
+                    </div>
+                    <div class="priority-card-body">
+                        <h3>Programme de revitalisation rurale et agricole</h3>
+                        <p>Soutien accru aux districts périphériques pour préserver le patrimoine paysager tout en modernisant la production.</p>
+                        <a href="">
+                            En savoir plus
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="news-title">
+                <h2>Actualités récentes</h2>
+                <a href="">
+                    Toutes les actualités
+                    <i class="fa-solid fa-angle-right"></i>
                 </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-hospital fa-2x"></i>
-                    <p>Santé et bien-être</p>
+            </div>
+
+            <div class="news-container">
+                <a href="" class="news-card">
+                    <p>11 Juin 2026</p>
+                    <h3>Nouvelle loi sur la protection des données personnelles</h3>
+                    <p>Le gouvernement renforce la sécurité et la confidentialité des citoyens.</p>
                 </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-graduation-cap fa-2x"></i>
-                    <p>Éducation et formation</p>
+
+                <a href="" class="news-card">
+                    <p>09 Juin 2026</p>
+                    <h3>Inauguration du nouveau centre hospitalier de Valmont</h3>
+                    <p>Un investissement de 180 millions pour améliorer les soins de santé.</p>
                 </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-briefcase fa-2x"></i>
-                    <p>Emploi et économie</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-bus fa-2x"></i>
-                    <p>Transport et mobilité</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-tree fa-2x"></i>
-                    <p>Environnement</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-scale-balanced fa-2x"></i>
-                    <p>Justice et sécurité</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-city fa-2x"></i>
-                    <p>Logement et urbanisme</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-masks-theater fa-2x"></i>
-                    <p>Culture et patrimoine</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-utensils fa-2x"></i>
-                    <p>Agriculture et alimentation</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-coins fa-2x"></i>
-                    <p>Fiscalité et finances</p>
-                </a>
-                <a href="" class="card">
-                    <i class="fa-solid fa-earth-europe fa-2x"></i>
-                    <p>Immigration</p>
+
+                <a href="" class="news-card">
+                    <p>07 Juin 2026</p>
+                    <h3>Programme de soutien aux entreprises locales</h3>
+                    <p>Lancement de subventions pour stimuler l'économie régionale.</p>
                 </a>
             </div>
         </section>
     </main>
-    
-</body>
+  </body>
 </html>

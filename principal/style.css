@@ -267,7 +267,7 @@ nav{
 /* Section Card */
 
 .service{
-    padding-top: 64px;
+    padding: 64px 0;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -297,7 +297,7 @@ nav{
 }
 
 .card{
-    padding: 25px;
+    padding: 29px 44px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -320,6 +320,198 @@ nav{
 
 .card p{
     color: var(--ColorText4);
-    font-size: 18px;
+    font-size: 22px;
     line-height: 27px; /* 150% */
+}
+
+/* Priority Container */
+
+.priority{
+    width: 100%;
+    padding: 64px 107px 64px 107px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.priority-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.priority-title h2{
+    color: var(--ColorMain);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px; /* 120% */
+}
+
+.priority-title a{
+    text-decoration: none;
+    color: var(--ColorSecundary);
+    font-size: 16px;
+    line-height: 24px; /* 150% */
+}
+
+.priority-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.priority-card{
+    width: 100%;
+    max-width: 255px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.priority-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.priority-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.35s ease;
+}
+
+.priority-card-body{
+    padding: 7px 20px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.priority-card h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+
+    color: var(--ColorMain);
+}
+
+.priority-card p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--ColorText3);
+}
+
+.priority-card a{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--ColorSecundary);
+}
+
+.priority-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.priority-card:hover .news-image img{
+    transform: scale(1.05);
+}
+
+/* News Container */
+
+.news{
+    width: 100%;
+    padding: 64px 107px 64px 107px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    background: #F9FAFB;
+}
+
+.news-title{
+   display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.news-title h2{
+    color: var(--ColorMain);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px; /* 120% */
+}
+
+.news-title a{
+    text-decoration: none;
+    color: var(--ColorSecundary);
+    font-size: 16px;
+    line-height: 24px; /* 150% */
+}
+
+.news-container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.news-card{
+    padding: 20px;
+    width: 100%;
+    max-width: 255px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+    border: 1px solid #E5E7EB;
+    background: #FFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+    overflow: hidden;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-card p:first-of-type{
+    color: #6A7282;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+}
+
+.news-card h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+
+    color: var(--ColorMain);
+}
+
+.news-card p:nth-of-type(2){
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--ColorText3);
+}
+
+.news-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
 }
