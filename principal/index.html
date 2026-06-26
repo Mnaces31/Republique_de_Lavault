@@ -33,7 +33,50 @@
             <p>Gouvernement officiel</p>
           </div>
         </div>
+
+        <button class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <!--Fechar Menu-->
+          <div class="overlay" id="overlay"></div>
+
+          <button class="close-menu" id="closeMenu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+
+          <!--Menu Principal-->
+          <div class="menu-panel open" id="mainPanel">
+            <a href="">L'actualités</a>
+            <a href="">Immigration</a>
+            <a href="">Prestations</a>
+
+            <button class="go-submenu" id="goProvinces">
+              Provinces
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+
+          <!--Sub-menu Provinces-->
+          <div class="menu-panel" id="provincePanel">
+            <button class="back-btn" id="backBtn">
+              <i class="fa-solid fa-arrow-left"></i>
+              Retour
+            </button>
+
+            <a href="">Amons</a>
+            <a href="">Gremont</a>
+            <a href="">Licques</a>
+            <a href="">Mauvais</a>
+            <a href="">Nubecourt</a>
+          </div>
+        </div>
+
         <nav class="nav">
+          <!-- Desktop-->
           <ul class="menu">
             <li class="item"><a href="#">L'actualités</a></li>
             <li class="item"><a href="#">Immigration</a></li>
@@ -306,5 +349,7 @@
         </div>
       </section>
     </footer>
+
+    <script src="../javascript/components/nav-mobile/menu.js"></script>
   </body>
 </html>

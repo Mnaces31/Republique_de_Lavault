@@ -183,6 +183,135 @@ nav {
   color: var(--ColorText2);
 }
 
+/* Hamburger */
+
+.hamburger{
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span{
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 999px;
+}
+
+/* Header Responsiveness*/
+
+@media (max-width: 900px) {
+  .hamburger{
+    display: flex;
+  }
+
+  .nav,
+  .nav-search{
+    display: none;
+  }
+
+  .nav.active{
+    display: block;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    background: var(--ColorText4);
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .nav.active .menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav.active .submenu{
+    position: static;
+    margin-top: 10px;
+  }
+}
+
+/*Province Sub-menu*/
+
+.mobile-menu{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background: var(--ColorMain);
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open{
+  right: 0;
+}
+
+.overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.overlay.show{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.close-menu{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: var(--ColorBackground);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.menu-panel{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  left: 100%;
+  transition: left 0.3s ease;
+}
+
+.menu-panel.open{
+  left: 0;
+}
+
+.menu-panel a,
+.menu-panel button,
+.go-submenu{
+  font-size: 1.1rem;
+  background: none;
+  border: none;
+  
+  text-align: center;
+  text-decoration: none;
+  color: var(--ColorText5);
+
+  cursor: pointer;
+}
+
 /*-----Section Hero-----*/
 
 .hero {
