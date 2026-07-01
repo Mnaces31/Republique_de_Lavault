@@ -185,7 +185,7 @@ nav {
 
 /* Hamburger */
 
-.hamburger{
+.hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -196,7 +196,7 @@ nav {
   cursor: pointer;
 }
 
-.hamburger span{
+.hamburger span {
   width: 100%;
   height: 3px;
   background: white;
@@ -205,17 +205,17 @@ nav {
 
 /* Header Responsiveness*/
 
-@media (max-width: 900px) {
-  .hamburger{
+@media (max-width: 1024px) {
+  .hamburger {
     display: flex;
   }
 
   .nav,
-  .nav-search{
+  .nav-search {
     display: none;
   }
 
-  .nav.active{
+  .nav.active {
     display: block;
     position: absolute;
     top: 90px;
@@ -226,13 +226,13 @@ nav {
     z-index: 999;
   }
 
-  .nav.active .menu{
+  .nav.active .menu {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .nav.active .submenu{
+  .nav.active .submenu {
     position: static;
     margin-top: 10px;
   }
@@ -240,37 +240,37 @@ nav {
 
 /*Province Sub-menu*/
 
-.mobile-menu{
+.mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
   width: 320px;
   height: 100vh;
   background: var(--ColorMain);
-  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
   transition: right 0.3s ease;
   z-index: 999;
 }
 
-.mobile-menu.open{
+.mobile-menu.open {
   right: 0;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
 }
 
-.overlay.show{
+.overlay.show {
   opacity: 1;
   pointer-events: all;
 }
 
-.close-menu{
+.close-menu {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -282,7 +282,7 @@ nav {
   z-index: 1000;
 }
 
-.menu-panel{
+.menu-panel {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -294,17 +294,17 @@ nav {
   transition: left 0.3s ease;
 }
 
-.menu-panel.open{
+.menu-panel.open {
   left: 0;
 }
 
 .menu-panel a,
 .menu-panel button,
-.go-submenu{
+.go-submenu {
   font-size: 1.1rem;
   background: none;
   border: none;
-  
+
   text-align: center;
   text-decoration: none;
   color: var(--ColorText5);
@@ -443,6 +443,10 @@ nav {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
+.service-icon {
+  font-size: 32px;
+}
+
 .card svg {
   color: var(--ColorMain);
 }
@@ -451,6 +455,20 @@ nav {
   color: var(--ColorText4);
   font-size: 22px;
   line-height: 27px; /* 150% */
+}
+
+@media (max-width: 768px) {
+  .service {
+    padding: 64px 48px;
+  }
+
+  .card {
+    padding: 29px 24px;
+  }
+
+  .card p {
+    font-size: 17px;
+  }
 }
 
 /* Priority Container */
@@ -561,6 +579,17 @@ nav {
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .priority-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .priority-card {
+    max-width: none;
+  }
+}
+
 /* News Container */
 
 .news {
@@ -651,10 +680,19 @@ nav {
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .news-container {
+    flex-direction: column;
+  }
+
+  .news-card {
+    max-width: none;
+  }
+}
 /* FOOTER */
 
 footer {
-  padding: 48px 123px 48px 123px;
+  padding: 48px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -663,7 +701,7 @@ footer {
 }
 
 .quick-link {
-  display: inline-flex;
+  display: flex;
   justify-content: space-around;
 }
 
@@ -689,7 +727,7 @@ footer {
 }
 
 .copyright {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
 }
 
@@ -720,16 +758,35 @@ footer {
   color: var(--ColorText5);
 }
 
-.copyright-link{
-    display: flex;
-    gap: 15px;
+.copyright-link {
+  display: flex;
+  gap: 15px;
 
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px; /* 142.857% */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
 }
 
-.copyright-link a{
-    text-decoration: none;
-    color: var(--ColorText5);
+.copyright-link a {
+  text-decoration: none;
+  color: var(--ColorText5);
+}
+
+@media (max-width: 768px) {
+  footer {
+    gap: 40px;
+  }
+
+  .quick-link {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .copyright {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
 }

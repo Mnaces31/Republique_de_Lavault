@@ -17,7 +17,7 @@ Componente de **navbar responsiva** desenvolvido para a République de Lavault, 
 ✔ Sidebar lateral no mobile  
 ✔ Overlay ao abrir menu  
 ✔ Transição animada entre menu principal e submenu  
-✔ Campo de pesquisa estilizado  
+✔ Campo de pesquisa estilizado
 
 ---
 
@@ -47,91 +47,86 @@ Utilize o seguinte código dentro do `<body>`:
 
 ```html
 <header>
-      <div class="nav-container">
-        <div class="nav-title">
-          <div class="nav-img">
-            <img src="../assets/icons/noto_fleur-de-lis.svg" alt="Home" />
-          </div>
-          <div class="nav-text">
-            <h1>Republique de Lavault</h1>
-            <p>Gouvernement officiel</p>
-          </div>
-        </div>
+  <div class="nav-container">
+    <div class="nav-title">
+      <div class="nav-img">
+        <img src="../assets/icons/noto_fleur-de-lis.svg" alt="Home" />
+      </div>
+      <div class="nav-text">
+        <h1>Republique de Lavault</h1>
+        <p>Gouvernement officiel</p>
+      </div>
+    </div>
 
-        <button class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+    <button class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <!--Fechar Menu-->
+      <div class="overlay" id="overlay"></div>
+
+      <button class="close-menu" id="closeMenu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!--Menu Principal-->
+      <div class="menu-panel open" id="mainPanel">
+        <a href="">L'actualités</a>
+        <a href="">Immigration</a>
+        <a href="">Prestations</a>
+
+        <button class="go-submenu" id="goProvinces">
+          Provinces
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+
+      <!--Sub-menu Provinces-->
+      <div class="menu-panel" id="provincePanel">
+        <button class="back-btn" id="backBtn">
+          <i class="fa-solid fa-arrow-left"></i>
+          Retour
         </button>
 
-        <div class="mobile-menu" id="mobileMenu">
-          <!--Fechar Menu-->
-          <div class="overlay" id="overlay"></div>
-
-          <button class="close-menu" id="closeMenu">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-
-          <!--Menu Principal-->
-          <div class="menu-panel open" id="mainPanel">
-            <a href="">L'actualités</a>
-            <a href="">Immigration</a>
-            <a href="">Prestations</a>
-
-            <button class="go-submenu" id="goProvinces">
-              Provinces
-              <i class="fa-solid fa-angle-right"></i>
-            </button>
-          </div>
-
-          <!--Sub-menu Provinces-->
-          <div class="menu-panel" id="provincePanel">
-            <button class="back-btn" id="backBtn">
-              <i class="fa-solid fa-arrow-left"></i>
-              Retour
-            </button>
-
-            <a href="">Amons</a>
-            <a href="">Gremont</a>
-            <a href="">Licques</a>
-            <a href="">Mauvais</a>
-            <a href="">Nubecourt</a>
-          </div>
-        </div>
-
-        <nav class="nav">
-          <!-- Desktop-->
-          <ul class="menu">
-            <li class="item"><a href="#">L'actualités</a></li>
-            <li class="item"><a href="#">Immigration</a></li>
-            <li class="item"><a href="#">Prestations</a></li>
-
-            <li class="item dropdown">
-              <a href="#">Provinces</a>
-
-              <ul class="submenu">
-                <li><a href="#">Amons</a></li>
-                <li><a href="#">Gremont</a></li>
-                <li><a href="#">Licques</a></li>
-                <li><a href="#">Mauvais</a></li>
-                <li><a href="#">Nubecourt</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <div class="nav-search">
-          <form action="/search" method="get">
-            <img src="../assets/icons/Magnifying-Glass.svg" alt="Recherches" />
-            <input
-              type="search"
-              name="q"
-              id="search"
-              placeholder="Recherches"
-            />
-          </form>
-        </div>
+        <a href="">Amons</a>
+        <a href="">Gremont</a>
+        <a href="">Licques</a>
+        <a href="">Mauvais</a>
+        <a href="">Nubecourt</a>
       </div>
-    </header>
+    </div>
+
+    <nav class="nav">
+      <!-- Desktop-->
+      <ul class="menu">
+        <li class="item"><a href="#">L'actualités</a></li>
+        <li class="item"><a href="#">Immigration</a></li>
+        <li class="item"><a href="#">Prestations</a></li>
+
+        <li class="item dropdown">
+          <a href="#">Provinces</a>
+
+          <ul class="submenu">
+            <li><a href="#">Amons</a></li>
+            <li><a href="#">Gremont</a></li>
+            <li><a href="#">Licques</a></li>
+            <li><a href="#">Mauvais</a></li>
+            <li><a href="#">Nubecourt</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="nav-search">
+      <form action="/search" method="get">
+        <img src="../assets/icons/Magnifying-Glass.svg" alt="Recherches" />
+        <input type="search" name="q" id="search" placeholder="Recherches" />
+      </form>
+    </div>
+  </div>
+</header>
 ```
 
 ---
@@ -299,7 +294,7 @@ nav {
 
 /* Hamburger */
 
-.hamburger{
+.hamburger {
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -310,7 +305,7 @@ nav {
   cursor: pointer;
 }
 
-.hamburger span{
+.hamburger span {
   width: 100%;
   height: 3px;
   background: white;
@@ -319,17 +314,17 @@ nav {
 
 /* Header Responsiveness*/
 
-@media (max-width: 900px) {
-  .hamburger{
+@media (max-width: 1024px) {
+  .hamburger {
     display: flex;
   }
 
   .nav,
-  .nav-search{
+  .nav-search {
     display: none;
   }
 
-  .nav.active{
+  .nav.active {
     display: block;
     position: absolute;
     top: 90px;
@@ -340,13 +335,13 @@ nav {
     z-index: 999;
   }
 
-  .nav.active .menu{
+  .nav.active .menu {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .nav.active .submenu{
+  .nav.active .submenu {
     position: static;
     margin-top: 10px;
   }
@@ -354,37 +349,37 @@ nav {
 
 /*Province Sub-menu*/
 
-.mobile-menu{
+.mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
   width: 320px;
   height: 100vh;
   background: var(--ColorMain);
-  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
   transition: right 0.3s ease;
   z-index: 999;
 }
 
-.mobile-menu.open{
+.mobile-menu.open {
   right: 0;
 }
 
-.overlay{
+.overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
 }
 
-.overlay.show{
+.overlay.show {
   opacity: 1;
   pointer-events: all;
 }
 
-.close-menu{
+.close-menu {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -396,7 +391,7 @@ nav {
   z-index: 1000;
 }
 
-.menu-panel{
+.menu-panel {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -408,17 +403,17 @@ nav {
   transition: left 0.3s ease;
 }
 
-.menu-panel.open{
+.menu-panel.open {
   left: 0;
 }
 
 .menu-panel a,
 .menu-panel button,
-.go-submenu{
+.go-submenu {
   font-size: 1.1rem;
   background: none;
   border: none;
-  
+
   text-align: center;
   text-decoration: none;
   color: var(--ColorText5);

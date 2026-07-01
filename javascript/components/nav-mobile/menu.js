@@ -11,27 +11,27 @@ const goProvinces = document.getElementById("goProvinces");
 const backBtn = document.getElementById("backBtn");
 
 hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
+  mobileMenu.classList.toggle("open");
 });
 
 overlay.addEventListener("click", () => {
-    mobileMenu.classList.remove("open");
-    overlay.classList.remove("show");
-})
+  mobileMenu.classList.remove("open");
+  overlay.classList.remove("show");
+});
 
 closeMenu.addEventListener("click", () => {
-    mobileMenu.classList.remove("open");
+  mobileMenu.classList.remove("open");
 
-    mainPanel.classList.add("open");
-    provincePanel.classList.remove("open");
-})
+  mainPanel.classList.add("open");
+  provincePanel.classList.remove("open");
+});
 
 goProvinces.addEventListener("click", () => {
-    mainPanel.classList.remove("open");
-    provincePanel.classList.add("open");
+  mainPanel.classList.remove("open");
+  provincePanel.classList.add("open");
 });
 
 backBtn.addEventListener("click", () => {
-    provincePanel.classList.remove("open");
-    mainPanel.classList.add("open");
+  provincePanel.classList.remove("open");
+  mainPanel.classList.add("open");
 });
