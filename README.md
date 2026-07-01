@@ -54,11 +54,12 @@ Este projeto foi desenvolvido para praticar:
 
 ### Menu e Hero
 
-![home-hero](.docs/readme/home-hero.png)
+![home-hero](./docs/readme/home-hero.png)
+![home-hero-mobile](./docs/readme/home-hero-mobile.png)
 
 ### Menu mobile
 
-![menu-mobile](.docs/readme/menu-mobile.png)
+![menu-mobile](./docs/readme/menu-mobile.png)
 
 ### Seção de serviços e notícias
 
